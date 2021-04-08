@@ -17,7 +17,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import WebDriverException as WebDriverException
 
 config = {
-    'chromedriver_path': "/home/sspeedy/whatsapp-web/chromedriver".format(os.environ['HOME']),
+    'chromedriver_path': "./chromedriver",#home/sspeedy/whatsapp-web/chromedriver".format(os.environ['HOME'])
     'get_msg_interval': 5,  # Time (seconds). Recommended value: 5
     'colors': True,  # True/False. True prints colorful msgs in console
     'ww_url': "https://web.whatsapp.com/"
@@ -49,7 +49,7 @@ try:
             # authorize this application every time.
             # NOTE: This gets created in your home directory and can get quite large over time.
             # To fix this, simply delete this directory and re-authorize your WhatsApp Web session.
-            chrome_data_dir_directory = "{0}/.chrome/data_dir/whatsapp_web_cli".format(os.environ['HOME'])
+            chrome_data_dir_directory = "./chromedriver" #"{0}/.chrome/data_dir/whatsapp_web_cli".format(os.environ['HOME'])
             if not os.path.exists(chrome_data_dir_directory):
                 os.makedirs(chrome_data_dir_directory)
 
